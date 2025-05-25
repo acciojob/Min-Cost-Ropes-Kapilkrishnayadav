@@ -11,11 +11,11 @@ function heapify(arr,n,i)
 	let smallest=i;
 	let left=(2*i)+1;
 	let right=(2*i)+2;
-	if(arr[smallest]>arr[left])
+	if(left<n && arr[smallest]>arr[left])
 	{
 		smallest=left;
 	}
-	if(arr[smallest]>arr[right])
+	if(right <n && arr[smallest]>arr[right])
 	{
 		smallest=right;
 	}
@@ -73,7 +73,8 @@ while(arr.length>1){
         insert(arr,rope);
 		// console.log("a->",a," b->",b," rope->",rope," cost->",cost);
     }
-console.log(cost)
+// console.log(cost)
+	return cost
 }
 
 module.exports=mincost;
